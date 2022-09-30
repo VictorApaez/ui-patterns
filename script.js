@@ -29,6 +29,7 @@ function clickButtons(element, num) {
   const nextBtn = document.querySelectorAll(".btn-next")[num];
   const prevBtn = document.querySelectorAll(".btn-prev")[num];
   const width = document.querySelector(".top-rated").offsetWidth;
+  const modals = document.querySelectorAll(".modal");
   const posters = document.querySelectorAll(element);
 
   posters.forEach((poster) => {
@@ -36,6 +37,12 @@ function clickButtons(element, num) {
       e.target.querySelector(".modal").showModal();
     });
   });
+
+  // modals.forEach((modal) => {
+  //   modal.addEventListener("click", () => {
+  //     modal.close();
+  //   });
+  // });
 
   nextBtn.addEventListener("click", (e) => {
     e.path[1].querySelector(element).scrollBy({

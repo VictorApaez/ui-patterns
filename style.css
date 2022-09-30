@@ -84,3 +84,15 @@ body > h1 {
 .modal::backdrop {
   background: rgba(1, 1, 1, 0.7);
 }
+
+.test_modal {
+  background: url(https://image.tmdb.org/t/p/w185/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg);
+  height: 200px;
+  width: 200px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+}
