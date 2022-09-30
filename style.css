@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgb(32, 32, 32);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body > h1 {
+  font-size: 0.6rem;
+  margin-left: 40px;
+}
+.movie-container {
+  display: flex;
+  width: 100%;
+  height: 130px;
+  align-items: center;
+}
+
+.top-rated,
+.now-playing,
+.coming-soon {
+  display: flex;
+  overflow-y: scroll;
+  align-items: center;
+  height: 100%;
+}
+.poster {
+  min-width: 80px;
+  height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+.poster:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+.material-symbols-outlined:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.modal {
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+}
+.modal_content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.modal_content > img {
+  height: 150px;
+  background-size: cover;
+  margin-right: 10px;
+}
+.modal_content > div > p {
+  font-size: 11px;
+}
+.modal_content > div > h1 {
+  font-size: 14px;
+}
+.modal::backdrop {
+  background: rgba(1, 1, 1, 0.7);
+}
